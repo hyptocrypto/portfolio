@@ -1,0 +1,25 @@
+{
+  "name": "personal_page",
+  "version": "1.0.0",
+  "description": "Personal Portfolio page",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build"
+  },
+  "author": "Julian Baumgartner",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.1",
+    "@chakra-ui/react": "^1.7.4",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "framer-motion": "^5.6.0",
+    "next": "^12.0.8",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "sass": "^1.48.0"
+  }
+}
