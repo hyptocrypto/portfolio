@@ -73,6 +73,10 @@ export default function NavMenu() {
                 />
               </MenuButton>
               <MenuList>
+                <a href='mailto:jbaumgartner93@gmail.com'>
+                <MenuItem>Contact</MenuItem>
+                </a>
+                <MenuDivider />
                 <a href='https://www.github.com/hyptocrypto/'>
                 <MenuItem>Github</MenuItem>
                 </a>
