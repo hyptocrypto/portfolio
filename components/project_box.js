@@ -1,14 +1,22 @@
 import { Box, Image, Flex, Text, Center } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useColorMode } from "@chakra-ui/react";
 
 export default function ProjectBox(props) {
+    const { colorMode, toggleColorMode } = useColorMode();
+
     return (
         <a href={props.url} target="_blank">
-        <motion.button
-            whileHover={{scale:1.1}}
-            whileTap={{scale:0.9}}
-        >
-            <Box p="5" m="2" minH={233} maxW="200px" borderWidth="2px" borderRadius="10px" boxShadow="5px" >
+        <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
+            <Box  
+                p="5" 
+                m="2" 
+                minH={260} 
+                maxW="200px" 
+                borderColor={"grey"} 
+                borderWidth="1px" 
+                borderRadius="20px" 
+                boxShadow="10px" >
                 <Center>
                         <Image borderRadius="md" src={props.img} maxH={130}/>
                 </Center>
@@ -21,4 +29,4 @@ export default function ProjectBox(props) {
         </motion.button>
         </a>
     )
-};
+};  
