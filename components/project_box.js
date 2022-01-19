@@ -1,4 +1,4 @@
-import { Box, Image, Flex, Text } from "@chakra-ui/react";
+import { Box, Image, Flex, Text, Center } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 export default function ProjectBox(props) {
@@ -8,12 +8,12 @@ export default function ProjectBox(props) {
             whileHover={{scale:1.1}}
             whileTap={{scale:0.9}}
         >
-            <Box p="5" m="2" maxW="300px" borderWidth="2px" borderRadius="10px" boxShadow="5px" >
-                <Image borderRadius="md" src={props.img} />
+            <Box p="5" m="2" minH={233} maxW="200px" borderWidth="2px" borderRadius="10px" boxShadow="5px" >
+                <Center>
+                        <Image borderRadius="md" src={props.img} maxH={130}/>
+                </Center>
                 <Flex>
-                    <Text
-                        m={3}
-                    >
+                    <Text mt={3}>
                         {props.description}
                     </Text>
                 </Flex>

@@ -38,12 +38,12 @@ const Page = () => {
                 <ProjectBox 
                     url="https://www.github.com/SurfSightAI" 
                     img="/credentials.png"
-                    description="Highly encrypted credentials manager running as native desktop app"
+                    description="Encrypted credentials manager running as native desktop app"
                 />
                 <ProjectBox 
                     url="https://www.github.com/SurfSightAI" 
                     img="/SurfSight.png"
-                    description="SurfSight. Computer vision analytics for surfing."
+                    description="SurfSight. Computer vision analytics system for surfing and costal analysis."
                 />
                 <ProjectBox 
                     url="https://www.shuup.com" 
