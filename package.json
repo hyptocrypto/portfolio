@@ -4,6 +4,7 @@
   "description": "Personal Portfolio page",
   "main": "index.js",
   "scripts": {
+    "start": "next start",
     "dev": "next dev -H 0.0.0.0",
     "build": "next build"
   },
