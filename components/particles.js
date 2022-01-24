@@ -18,7 +18,7 @@ const { colorMode, toggleColorMode } = useColorMode();
                     }
                   },
                   color: {
-                    value: "#007fc9"
+                    value: "A1A8FF", 
                   },
                   shape: {
                     type: "circle",
@@ -57,7 +57,7 @@ const { colorMode, toggleColorMode } = useColorMode();
                   line_linked: {
                     enable: true,
                     distance: 100,
-                    color: "#D8D3D3",
+                    color: colorMode==="light"? "#000000": "#D8D3D3",
                     opacity: 0.4,
                     width: 1
                   },
