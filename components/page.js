@@ -3,7 +3,8 @@ import Section from "./section";
 import { Heading, VStack, HStack, useColorMode, Container, useMediaQuery, Center } from "@chakra-ui/react";
 import { Box, Image, Text} from "@chakra-ui/react";
 import ProjectContainer from "./projects_container";
-
+import IconImage from "./image";
+import { motion } from "framer-motion";
 
 const Page = () => {
     const isSmallerThan700 = useMediaQuery('(max-width: 800px)')
@@ -25,35 +26,33 @@ const Page = () => {
             </Section>
             <Section delay={.2}>
                 <Center>
-                <Image
-                src="/me.jpg"
-                maxH={200}
-                maxW={200}
-                borderRadius="full"
-                borderWidth={3}
-                borderStyle="solid"
-                mb={5}
-
-            />
+                    <Image
+                        src="/me.jpg"
+                        maxH={200}
+                        maxW={200}
+                        borderRadius="full"
+                        borderWidth={3}
+                        borderStyle="solid"
+                        mb={5}/>
                 </Center>
-            < HStack mb={5}>
-            <Image 
-                src="https://img.shields.io/badge/Python-C0C0C0?style=for-the-badge&logo=python&logoColor=blue"
-                borderRadius={10}
-            />
-            <Image 
-                src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green"
-                borderRadius={10}
-            />
-            <Image 
-                src="https://img.shields.io/badge/React-DBDBDB?style=for-the-badge&logo=react&logoColor=61DAFB"
-                borderRadius={10}
-            />
-            <Image 
-                src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"
-                borderRadius={10}
-            />
-            </HStack>
+                < HStack mb={5}>
+                    <IconImage 
+                        imglink={"https://www.python.org/"}
+                        imgsrc={"https://img.shields.io/badge/Python-C0C0C0?style=for-the-badge&logo=python&logoColor=blue"}
+                    />
+                    <IconImage 
+                        imglink="https://www.djangoproject.com/"
+                        imgsrc="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green"
+                    />
+                    <IconImage 
+                        imglink="https://reactjs.org/"
+                        imgsrc="https://img.shields.io/badge/React-DBDBDB?style=for-the-badge&logo=react&logoColor=61DAFB"
+                    />
+                    <IconImage 
+                        imglink="https://www.docker.com/"
+                        imgsrc="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"
+                />
+                </HStack>
             </Section>
 
             <Container opacity={1} bg={colorMode==="light"? "white": "#1a202c"} borderRadius={10}>

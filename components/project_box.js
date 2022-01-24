@@ -2,7 +2,7 @@ import { Box, Image, Flex, Text, Center } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useColorMode } from "@chakra-ui/react";
 
-export default function ProjectBox(props) {
+const ProjectBox = (props) => {
     const { colorMode, toggleColorMode } = useColorMode();
     
 
@@ -34,3 +34,5 @@ export default function ProjectBox(props) {
         </a>
     )
 };  
+
+export default ProjectBox
