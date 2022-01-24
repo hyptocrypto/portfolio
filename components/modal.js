@@ -41,7 +41,7 @@ import {
             <ModalHeader>Tips are very appreciated!</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-                {label} Address: {address}
+                {label}: {address}
             </ModalBody>
   
             <ModalFooter>
