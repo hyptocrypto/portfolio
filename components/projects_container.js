@@ -6,12 +6,12 @@ const ProjectContainer = (isSmallerThan700) => {
     let isSmall = Object.values(isSmallerThan700)[0][0]
     if (isSmall) {
         return (
-            <VStack>
+            <VStack >
             <Flex>
                 <HStack>
                 <ProjectBox 
                     url="https://www.github.com/SurfSightAI" 
-                    img="/credentials.png"
+                    img="/lock_icon.png"
                     description="Encrypted credentials manager running as native desktop app"
                 />
                 <ProjectBox 
@@ -43,9 +43,9 @@ const ProjectContainer = (isSmallerThan700) => {
             <Flex>
             <HStack>
                 <ProjectBox 
-                    url="https://www.github.com/SurfSightAI" 
-                    img="/credentials.png"
-                    description="Encrypted credentials manager running as native desktop app"
+                    url="https://www.github.com/hyptocrypto/LockIn" 
+                    img="/lock_icon.png"
+                    description="Encrypted credentials manager app."
                 />
                 <ProjectBox 
                     url="https://www.github.com/SurfSightAI" 

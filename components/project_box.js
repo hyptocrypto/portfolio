@@ -4,6 +4,7 @@ import { useColorMode } from "@chakra-ui/react";
 
 export default function ProjectBox(props) {
     const { colorMode, toggleColorMode } = useColorMode();
+    
 
     return (
         <a href={props.url} target="_blank">
@@ -11,12 +12,15 @@ export default function ProjectBox(props) {
             <Box  
                 p="5" 
                 m="2" 
-                minH={260} 
-                maxW="200px" 
+                h={260}
+                w={200} 
                 borderColor={"grey"} 
                 borderWidth="1px" 
                 borderRadius="20px" 
-                boxShadow="10px" >
+                boxShadow="10px" 
+                opacity={1}
+                bg={colorMode==="light"? "white": "#1a202c"}
+                >
                 <Center>
                         <Image borderRadius="md" src={props.img} maxH={130}/>
                 </Center>
