@@ -7,7 +7,6 @@ import '@fontsource/raleway/700.css'
 import '@fontsource/open-sans/800.css'
 import Footer from "../components/footer";
 import ParticlesBackground from "../components/particles";
-import { useEffect } from "react";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const App = () => {

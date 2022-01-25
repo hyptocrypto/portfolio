@@ -1,8 +1,7 @@
-import { Flex, Container, HStack, VStack, Image } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { Flex, HStack, VStack } from "@chakra-ui/react";
 import ProjectBox from "./project_box";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+
 
 
 // The ProjectContainer manages rendering the layout the project boxes based on device size

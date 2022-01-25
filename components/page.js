@@ -1,18 +1,16 @@
-import React, { useEffect } from "react";
 import Section from "./section";
 import { Heading, VStack, HStack, useColorMode, Container, useMediaQuery, Center } from "@chakra-ui/react";
 import { Box, Image, Text} from "@chakra-ui/react";
 import ProjectContainer from "./projects_container";
 import IconImage from "./image";
-import { motion } from "framer-motion";
-import { Main } from "next/document";
 
 
 const Page = (props) => {
     const isSmall = props.isSmall
     const isVerySmall = props.isVerySmall
     const { colorMode, toggleColorMode } = useColorMode();
-    
+    let [is_small] = useMediaQuery("(max-width: 550px)");
+
     return (
         
         <VStack p={5} >
@@ -26,7 +24,7 @@ const Page = (props) => {
                     bgGradient={colorMode==="light" ? "linear(to-b, blue.400, blue.800)" : "linear(to-b, blue.100, blue.700)"}
                     bgClip="text"
                     >
-                    Julian Baumgartner
+                    {is_small ? "Julian Baumgartner" : "Hi! Im Julian Baumgartner"}    
                 </Heading>
             </Section>
             </Center>
