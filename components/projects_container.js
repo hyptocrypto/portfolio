@@ -1,4 +1,5 @@
-import { Flex, HStack, VStack } from "@chakra-ui/react";
+import { Flex, HStack, VStack, useMediaQuery } from "@chakra-ui/react";
+import { useEffect } from "react";
 import ProjectBox from "./project_box";
 
 
@@ -6,8 +7,11 @@ import ProjectBox from "./project_box";
 
 // The ProjectContainer manages rendering the layout the project boxes based on device size
 const ProjectContainer = (props) => {
-    let isSmall = props.isSmall[0]
-    let isVerySmall = props.isVerySmall[0]
+    const [isSmall] = useMediaQuery('(max-width: 900px)');
+    const [isVerySmall] = useMediaQuery('(max-width: 450px)');
+    
+
+    useEffect(()=>{alert(window.innerWidth)}, []);
 
     if (isVerySmall === true) {
         return (

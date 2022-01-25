@@ -5,11 +5,24 @@ import ProjectContainer from "./projects_container";
 import IconImage from "./image";
 
 
-const Page = (props) => {
-    const isSmall = props.isSmall
-    const isVerySmall = props.isVerySmall
+const Page = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     let [is_small] = useMediaQuery("(max-width: 550px)");
+    const [isMobile] = useMediaQuery('(max-width: 420px)');
+    
+    let heading = () => {
+        if (isMobile) {
+            return (
+                <VStack>
+                    <Center>Julian</Center>
+                    <Center>Baumgartner</Center>
+                </VStack>
+                    )
+        } else {
+            return is_small ? "Julian Baumgartner" : "Hi! Im Julian Baumgartner"
+        }
+    };
+    
 
     return (
         
@@ -24,7 +37,7 @@ const Page = (props) => {
                     bgGradient={colorMode==="light" ? "linear(to-b, blue.400, blue.800)" : "linear(to-b, blue.100, blue.700)"}
                     bgClip="text"
                     >
-                    {is_small ? "Julian Baumgartner" : "Hi! Im Julian Baumgartner"}    
+                    {heading()}
                 </Heading>
             </Section>
             </Center>
@@ -85,7 +98,7 @@ const Page = (props) => {
             </Container>
 
             <Section delay={.9}>
-                <ProjectContainer isSmall={isSmall} isVerySmall={isVerySmall}/>
+                <ProjectContainer/>
             </Section>
             <Box height="10" ></Box>
             
