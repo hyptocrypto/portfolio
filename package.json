@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "next start",
+    "dev_local": "next dev -H 192.168.1.29",
     "dev": "next dev -H 0.0.0.0",
     "build": "next build"
   },

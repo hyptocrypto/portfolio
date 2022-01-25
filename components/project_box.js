@@ -9,15 +9,15 @@ const ProjectBox = (props) => {
     return (
         <a href={props.url} target="_blank">
         <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
-            <Box  
+            <Box
                 p="5" 
                 m="2" 
                 h={260}
-                w={200} 
-                borderColor={"grey"} 
+                maxH={280}
+                w={200}  
                 borderWidth="1px" 
                 borderRadius="20px" 
-                boxShadow="10px" 
+                boxShadow="md" 
                 opacity={1}
                 bg={colorMode==="light"? "white": "#1a202c"}
                 >
@@ -25,7 +25,7 @@ const ProjectBox = (props) => {
                         <Image borderRadius="md" src={props.img} maxH={130}/>
                 </Center>
                 <Flex>
-                    <Text mt={3}>
+                    <Text mt={3} >
                         {props.description}
                     </Text>
                 </Flex>

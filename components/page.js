@@ -1,29 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Section from "./section";
 import { Heading, VStack, HStack, useColorMode, Container, useMediaQuery, Center } from "@chakra-ui/react";
 import { Box, Image, Text} from "@chakra-ui/react";
 import ProjectContainer from "./projects_container";
 import IconImage from "./image";
 import { motion } from "framer-motion";
+import { Main } from "next/document";
 
-const Page = () => {
-    const isSmallerThan700 = useMediaQuery('(max-width: 800px)')
+
+const Page = (props) => {
+    const isSmall = props.isSmall
+    const isVerySmall = props.isVerySmall
     const { colorMode, toggleColorMode } = useColorMode();
-
+    
     return (
         
         <VStack p={5} >
+            <Center>
             <Section delay={.2}>
                 <Heading
+                    orientation="horizontal"
                     paddingBottom={2}
                     fontWeight="extrabold"
                     size="2xl"
                     bgGradient={colorMode==="light" ? "linear(to-b, blue.400, blue.800)" : "linear(to-b, blue.100, blue.700)"}
                     bgClip="text"
                     >
-                    Hi! Im Julian Baumgartner
+                    Julian Baumgartner
                 </Heading>
             </Section>
+            </Center>
             <Section delay={.2}>
                 <Center>
                     <Image
@@ -55,7 +61,7 @@ const Page = () => {
                 </HStack>
             </Section>
 
-            <Container opacity={1} bg={colorMode==="light"? "white": "#1a202c"} borderRadius={10}>
+            <Container opacity={1} bg={colorMode==="light"? "white": "#1a202c"} borderRadius={10} boxShadow={"md"}>
                 <HStack>                
                     <Section delay={0.4} >
                         <Heading size="md" as="u" >Bio</Heading>
@@ -81,7 +87,7 @@ const Page = () => {
             </Container>
 
             <Section delay={.9}>
-                <ProjectContainer isSmallerThan700={isSmallerThan700}/>
+                <ProjectContainer isSmall={isSmall} isVerySmall={isVerySmall}/>
             </Section>
             <Box height="10" ></Box>
             

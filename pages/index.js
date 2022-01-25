@@ -2,15 +2,22 @@
 import Page from "../components/page";
 import NavMenu from "../components/nav";
 import theme from "../components/theme";
-import { ChakraProvider, ColorModeScript, position} from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript, componentDidMount} from "@chakra-ui/react";
 import '@fontsource/raleway/700.css'
 import '@fontsource/open-sans/800.css'
 import Footer from "../components/footer";
 import ParticlesBackground from "../components/particles";
+import { useEffect } from "react";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const App = () => {
+    const isSmall = useMediaQuery('(max-width: 900px)');
+    const shouldAdjustHeading = useMediaQuery('(max-width: 530px)');
+    const isVerySmall = useMediaQuery('(max-width: 450px)');
+    
     return(
-        <ChakraProvider theme={theme}>
+        <ChakraProvider theme={theme}>            
+            <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <ColorModeScript initialColorMode="dark"/>
             
             {/* Inline styling to keep particles as background */}
@@ -19,7 +26,10 @@ const App = () => {
             </div>
             
             <NavMenu/>
-            <Page/>
+            <Page 
+                isSmall={isSmall} 
+                isVerySmall={isVerySmall}
+                shouldAdjustHeading={shouldAdjustHeading}/>
             <Footer/>
         </ChakraProvider>
         )
