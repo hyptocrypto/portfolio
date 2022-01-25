@@ -9,9 +9,6 @@ import ProjectBox from "./project_box";
 const ProjectContainer = (props) => {
     const [isSmall] = useMediaQuery('(max-width: 900px)');
     const [isVerySmall] = useMediaQuery('(max-width: 450px)');
-    
-
-    useEffect(()=>{alert(window.innerWidth)}, []);
 
     if (isVerySmall === true) {
         return (
