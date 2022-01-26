@@ -15,7 +15,7 @@ const App = () => {
         <ChakraProvider theme={theme}>            
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <ColorModeScript 
-                useSystemColorMod="false"
+                useSystemColorMode="false"
                 initialColorMode="dark"
                 />
             
