@@ -13,10 +13,10 @@ const Page = () => {
     let heading = () => {
         if (isMobile) {
             return (
-                <VStack>
-                    <Center>Julian</Center>
-                    <Center>Baumgartner</Center>
-                </VStack>
+                <div>
+                    <div align="center">Julian</div>
+                    <div align="center">Baumgartner</div>
+                </div>
                     )
         } else {
             return is_small ? "Julian Baumgartner" : "Hi! Im Julian Baumgartner"
