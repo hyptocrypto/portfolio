@@ -19,7 +19,7 @@ const Page = () => {
                 </div>
                     )
         } else {
-            return is_small ? "Julian Baumgartner" : "Hi! Im Julian Baumgartner"
+            return is_small ? "Julian Baumgartner" : "Hi! I'm Julian Baumgartner"
         }
     };
     
