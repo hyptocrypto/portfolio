@@ -14,7 +14,10 @@ const App = () => {
     return(
         <ChakraProvider theme={theme}>            
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-            <ColorModeScript initialColorMode="dark"/>
+            <ColorModeScript 
+                useSystemColorMod="false"
+                initialColorMode="dark"
+                />
             
             {/* Inline styling to keep particles as background */}
             <div style={{position: "absolute", width: "100", height: "100", zIndex: -1}}>
