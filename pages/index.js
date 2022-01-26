@@ -11,9 +11,21 @@ import ParticlesBackground from "../components/particles";
 
 const App = () => {
     
+    function ForceDarkMode(props) {
+        const { colorMode, toggleColorMode } = useColorMode();
+      
+        useEffect(() => {
+          if (colorMode === "dark") return;
+          toggleColorMode();
+        }, [colorMode]);
+      
+        return props.children;
+      }
+    
     return(
         <ChakraProvider theme={theme}>            
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+            <ForceDarkMode>
             <ColorModeScript 
                 useSystemColorMod="false"
                 initialColorMode="dark"
@@ -27,6 +39,7 @@ const App = () => {
             <NavMenu/>
             <Page/>
             <Footer/>
+            </ForceDarkMode>
         </ChakraProvider>
         )
 }
