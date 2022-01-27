@@ -91,7 +91,7 @@ const Page = () => {
                 </HStack>
                 <HStack mb={3}>
                 <Section delay={.7}>
-                        <Text ml={3}>I have developed desktop applications and web-scrapping bots. I have built scalable APIs, robust data layers, and sleek user interfaces. I contributed to open-source projects, and have built secure code for private clients. Below are a few things I have build and worked on. Please feel free to reach out for with inquiries.</Text>
+                        <Text ml={3}>I have developed desktop applications and web-scrapping bots. I have built scalable APIs, robust data layers, and sleek user interfaces. I contributed to open-source projects, and have built secure code for private clients. Below are a few things I have built and worked on. Please feel free to reach out for with inquiries.</Text>
                 </Section>
             </HStack>
 

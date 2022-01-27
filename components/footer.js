@@ -4,6 +4,7 @@ import {
     Stack,
     Text,
     useColorMode,
+    chakra
   } from '@chakra-ui/react';
 import {FaMailBulk, FaBitcoin, FaEthereum, FaMonero } from 'react-icons/fa';
 import FooterButton from './modal';
@@ -40,9 +41,21 @@ import FooterButton from './modal';
             <FooterButton label={'XMR'} address="k34j34j3k43j43k34j34k" colorMode={colorMode}>
               <FaMonero />
             </FooterButton>
-            <FooterButton label={'Email'} href={'mailto:jbaumgartner93@gmail.com'} colorMode={colorMode}>
-              <FaMailBulk />
-            </FooterButton>
+            <a href={'mailto:jbaumgartner93@gmail.com'}>
+              <chakra.button
+                bg={colorMode==="light"? "lightgrey" : "whiteAlpha.100"}
+                rounded={'full'}
+                w={10}
+                h={10}
+                cursor={'pointer'}
+                display={'inline-flex'}
+                alignItems={'center'}
+                justifyContent={'center'}
+                transition={'background 0.3s ease'}
+                >
+                  <FaMailBulk />
+                </chakra.button>
+              </a>
           </Stack>
         </Container>
       </Box>
