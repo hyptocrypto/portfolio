@@ -36,9 +36,9 @@ const ProjectContainer = (props) => {
                     </div>
                     <div>
                         <ProjectBox 
-                            url="https://github.com/hyptocrypto/RPA_Deploy_Monitor" 
-                            img="/RPA.png"
-                            description="RPA (Remote Penetration testing Appliance) management platform"
+                            url="https://pypi.org/project/PyStrong/" 
+                            img="/python.png"
+                            description="PyStrong. Type enforcement for python objects."
                         /> 
                     </div>
                 </>
@@ -68,9 +68,9 @@ const ProjectContainer = (props) => {
                     description="Bespoke e-commerce solutions."
                 />
                 <ProjectBox 
-                    url="https://github.com/hyptocrypto/RPA_Deploy_Monitor" 
-                    img="/RPA.png"
-                    description="RPA (Remote Penetration testing Appliance) management platform"
+                    url="https://pypi.org/project/PyStrong/" 
+                    img="/python.png"
+                    description="PyStrong. Type enforcement for python objects."
                 />
             </HStack>
             </Flex>
@@ -88,8 +88,8 @@ const ProjectContainer = (props) => {
                 />
                 <ProjectBox 
                     url="https://www.github.com/SurfSightAI" 
-                    img="/SurfSight.png"
-                    description="SurfSight. Computer vision analytics system for surfing and costal analysis."
+                    img="/surfsight_logo.png"
+                    description="SurfSight. Computer vision analytics surfing."
                 />
                 <ProjectBox 
                     url="https://www.shuup.com" 
@@ -97,9 +97,9 @@ const ProjectContainer = (props) => {
                     description="Bespoke e-commerce solutions."
                 />
                 <ProjectBox 
-                    url="https://github.com/hyptocrypto/RPA_Deploy_Monitor" 
-                    img="/RPA.png"
-                    description="RPA (Remote Penetration testing Appliance) management platform"
+                    url="https://pypi.org/project/PyStrong/" 
+                    img="/python.png"
+                    description="PyStrong. Type enforcement for python objects."
                 />
             </HStack>
         </Flex>
