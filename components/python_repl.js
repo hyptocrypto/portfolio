@@ -13,12 +13,14 @@ const PythonRepl = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const render_repl = () => {
         return ( 
+            <Container color={"black"} opacity={1} bg={colorMode==="light"? "white": "#A2A2A2"} borderRadius={10} boxShadow={"md"} mb="10opx">
             <div>
             <Heading color={colorMode==="light"? "black": "white"}>Run code with shift+enter!</Heading>           
             <div>
                 <py-repl id="my-repl" auto-generate="true">print("Hello world!")</py-repl>
             </div>
             </div>
+            </Container>
         )
 
     }

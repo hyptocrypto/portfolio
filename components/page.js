@@ -102,9 +102,7 @@ const Page = () => {
             </Section>
             <Box height="10" ></Box>
             <Section delay={1.2}>
-            <Container color={"black"} opacity={1} bg={colorMode==="light"? "white": "#A2A2A2"} borderRadius={10} boxShadow={"md"} mb="10opx">
                 <PythonRepl/>
-            </Container>
             </Section>
             
         </VStack>
