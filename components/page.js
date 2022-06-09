@@ -1,7 +1,8 @@
 import Section from "./section";
-import { Heading, VStack, HStack, useColorMode, Container, useMediaQuery, Center } from "@chakra-ui/react";
+import { Heading, VStack, HStack, useColorMode, Container, useMediaQuery, Center, Button } from "@chakra-ui/react";
 import { Box, Image, Text} from "@chakra-ui/react";
 import ProjectContainer from "./projects_container";
+import PythonRepl from "./python_repl";
 import IconImage from "./image";
 
 
@@ -23,7 +24,6 @@ const Page = () => {
         }
     };
     
-
     return (
         
         <VStack p={5} >
@@ -101,6 +101,11 @@ const Page = () => {
                 <ProjectContainer/>
             </Section>
             <Box height="10" ></Box>
+            <Section delay={1.2}>
+            <Container color={"black"} opacity={1} bg={colorMode==="light"? "white": "#A2A2A2"} borderRadius={10} boxShadow={"md"} mb="10opx">
+                <PythonRepl/>
+            </Container>
+            </Section>
             
         </VStack>
         
