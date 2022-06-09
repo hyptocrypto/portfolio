@@ -23,7 +23,7 @@ const ProjectContainer = (props) => {
                     <div>
                         <ProjectBox 
                             url="https://www.github.com/SurfSightAI" 
-                            img="/SurfSight.png"
+                            img="/surfsight_logo.png"
                             description="SurfSight. Computer vision analytics system for surfing and costal analysis."
                         />
                     </div>
@@ -55,7 +55,7 @@ const ProjectContainer = (props) => {
                 />
                 <ProjectBox 
                     url="https://www.github.com/SurfSightAI" 
-                    img="/SurfSight.png"
+                    img="/surfsight_logo.png"
                     description="SurfSight. Computer vision analytics system for surfing and costal analysis."
                 />
                 </HStack>
