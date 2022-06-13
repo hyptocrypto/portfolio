@@ -15,7 +15,7 @@ const ProjectContainer = (props) => {
                 <>
                     <div>
                         <ProjectBox 
-                            url="https://www.github.com/SurfSightAI" 
+                            url="https://www.github.com/hyptocrypto/LockIn" 
                             img="/lock_icon.png"
                             description="Encrypted credentials manager app"
                         />
@@ -49,7 +49,7 @@ const ProjectContainer = (props) => {
             <Flex>
                 <HStack>
                 <ProjectBox 
-                    url="https://www.github.com/SurfSightAI" 
+                    url="https://www.github.com/hyptocrypto/LockIn" 
                     img="/lock_icon.png"
                     description="Encrypted credentials manager app"
                 />
