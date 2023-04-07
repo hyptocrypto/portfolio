@@ -26,9 +26,7 @@ const App = () => {
       }
     
     return(
-        <ChakraProvider theme={theme}>
-            <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-            <script defer src="https://pyscript.net/alpha/pyscript.js"></script>            
+        <ChakraProvider theme={theme}>          
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <SetDarkMode>
             <ColorModeScript 
