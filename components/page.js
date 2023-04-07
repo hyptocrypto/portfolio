@@ -101,10 +101,6 @@ const Page = () => {
                 <ProjectContainer/>
             </Section>
             <Box height="10" ></Box>
-            <Section delay={1.2}>
-                <PythonRepl/>
-            </Section>
-            
         </VStack>
         
     )
