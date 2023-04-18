@@ -80,7 +80,7 @@ const Page = () => {
                 </HStack>
                 <HStack mb={5}>
                 <Section delay={.5}>
-                        <Text ml={3}>I am a full-stack developer based in the United States. I primarily work with Django, React, and Docker. Im passionate about Defi & Web3, enjoy scripting & automation, and strongly prefer a linux based environment. In my spare time I surf, play piano, and tinker with cars.</Text>
+                        <Text ml={3}>I am a full-stack developer based in the United States. I like to work with Django, React, and Docker, but have tons of experience with with kubernetes, graphql and kafka. Im passionate about Defi, enjoy scripting & automation, and strongly prefer a linux based environment. In my spare time I surf, play golf, play piano, and tinker with cars.</Text>
                 </Section>
             </HStack>
 
@@ -91,7 +91,7 @@ const Page = () => {
                 </HStack>
                 <HStack mb={3}>
                 <Section delay={.7}>
-                        <Text ml={3}>I have developed desktop applications and web-scrapping bots. I have built scalable APIs, robust data layers, and sleek user interfaces. I contributed to open-source projects, and have built secure code for private clients. Below are a few things I have built and worked on. Please feel free to reach out for with inquiries.</Text>
+                        <Text ml={3}>I have developed desktop applications and web-scrapping bots. I have built scalable APIs, robust data layers, and sleek user interfaces. I contributed to open-source projects, and have built secure code for private clients. Below are a few things I have built and worked on. Please feel free to reach out with any inquiries.</Text>
                 </Section>
             </HStack>
 
