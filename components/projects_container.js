@@ -15,7 +15,7 @@ const ProjectContainer = (props) => {
                 <>
                     <div>
                         <ProjectBox 
-                            url="https://www.github.com/hyptocrypto/LockIn" 
+                            url="https://www.github.com/hyptocrypto/lockin-v2" 
                             img="/lock_icon.png"
                             description="Encrypted credentials manager app"
                         />
@@ -28,10 +28,10 @@ const ProjectContainer = (props) => {
                         />
                     </div>
                     <div>
-                        <ProjectBox 
-                            url="https://www.shuup.com" 
-                            img="/shuup.png"
-                            description="Bespoke e-commerce solutions."
+                        <ProjectBox
+                            url="https://wails.io/"
+                            img="/wails.svg"
+                            description="Wails. Build desktop apps with Go and web technologies."
                         />
                     </div>
                     <div>
@@ -49,7 +49,7 @@ const ProjectContainer = (props) => {
             <Flex>
                 <HStack>
                 <ProjectBox 
-                    url="https://www.github.com/hyptocrypto/LockIn" 
+                    url="https://www.github.com/hyptocrypto/lockin-v2" 
                     img="/lock_icon.png"
                     description="Encrypted credentials manager app"
                 />
@@ -62,13 +62,13 @@ const ProjectContainer = (props) => {
                 </Flex>
                 <Flex>
                 <HStack>
-                <ProjectBox 
-                    url="https://www.shuup.com" 
-                    img="/shuup.png"
-                    description="Bespoke e-commerce solutions."
+                <ProjectBox
+                    url="https://wails.io/"
+                    img="/wails.svg"
+                    description="Wails. Build desktop apps with Go and web technologies."
                 />
-                <ProjectBox 
-                    url="https://pypi.org/project/PyStrong/" 
+                <ProjectBox
+                    url="https://pypi.org/project/PyStrong/"
                     img="/python.png"
                     description="PyStrong. Type enforcement for python objects."
                 />
@@ -82,7 +82,7 @@ const ProjectContainer = (props) => {
             <Flex>
             <HStack>
                 <ProjectBox 
-                    url="https://www.github.com/hyptocrypto/LockIn" 
+                    url="https://www.github.com/hyptocrypto/lockin-v2" 
                     img="/lock_icon.png"
                     description="Encrypted credentials manager app."
                 />
@@ -91,10 +91,10 @@ const ProjectContainer = (props) => {
                     img="/surfsight_logo.png"
                     description="SurfSight. Computer vision analytics surfing."
                 />
-                <ProjectBox 
-                    url="https://www.shuup.com" 
-                    img="/shuup.png"
-                    description="Bespoke e-commerce solutions."
+                <ProjectBox
+                    url="https://wails.io/"
+                    img="/wails.svg"
+                    description="Wails. Build desktop apps with Go and web technologies."
                 />
                 <ProjectBox 
                     url="https://pypi.org/project/PyStrong/" 

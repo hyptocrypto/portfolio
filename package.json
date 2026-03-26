@@ -12,14 +12,18 @@
   "author": "Julian Baumgartner",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.2",
-    "@chakra-ui/react": "^2.2.1",
-    "@fontsource/open-sans": "^4.5.10",
-    "@fontsource/raleway": "^4.5.9",
-    "framer-motion": "^6.3.11",
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-icons": "^4.4.0",
-    "react-tsparticles": "^1.39.0"
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/react": "^2.10.4",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/open-sans": "^5.1.1",
+    "@fontsource/raleway": "^5.1.1",
+    "framer-motion": "^11.18.2",
+    "next": "^14.2.29",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "react-tsparticles": "^2.9.3",
+    "tsparticles": "^2.9.3"
   }
 }

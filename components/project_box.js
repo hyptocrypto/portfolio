@@ -22,7 +22,18 @@ const ProjectBox = (props) => {
                 bg={colorMode==="light"? "white": "#1a202c"}
                 >
                 <Center>
-                        <Image borderRadius="md" src={props.img} maxH={130}/>
+                    <Box
+                        boxSize="110px"
+                        borderRadius="full"
+                        overflow="hidden"
+                        bg={colorMode === "light" ? "gray.100" : "whiteAlpha.100"}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        p={2}
+                    >
+                        <Image src={props.img} boxSize="90px" objectFit="contain" />
+                    </Box>
                 </Center>
                 <Flex>
                     <Text mt={3} >

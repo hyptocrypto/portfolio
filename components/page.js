@@ -1,47 +1,38 @@
 import Section from "./section";
-import { Heading, VStack, HStack, useColorMode, Container, useMediaQuery, Center, Button } from "@chakra-ui/react";
-import { Box, Image, Text} from "@chakra-ui/react";
+import { Heading, VStack, HStack, useColorMode, Container, useMediaQuery, Center, Tooltip } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import ProjectContainer from "./projects_container";
-import PythonRepl from "./python_repl";
-import IconImage from "./image";
+import { motion } from "framer-motion";
+import { SiGo, SiPython, SiLinux, SiDocker } from "react-icons/si";
+import { DiJavascript1 } from "react-icons/di";
 
 
 const Page = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
-    let [is_small] = useMediaQuery("(max-width: 550px)");
-    const [isMobile] = useMediaQuery('(max-width: 420px)');
-    
-    let heading = () => {
-        if (isMobile) {
-            return (
-                <div>
-                    <div align="center">Julian</div>
-                    <div align="center">Baumgartner</div>
-                </div>
-                    )
-        } else {
-            return is_small ? "Julian Baumgartner" : "Hi! I'm Julian Baumgartner"
-        }
-    };
-    
+    const { colorMode } = useColorMode();
+    const [isMobile] = useMediaQuery("(max-width: 420px)");
+    const [isSmall] = useMediaQuery("(max-width: 550px)");
+
+    const heading = isMobile
+        ? <div><div align="center">Julian</div><div align="center">Baumgartner</div></div>
+        : isSmall ? "Julian Baumgartner" : "Hi, I'm Julian Baumgartner";
+
     return (
-        
-        <VStack p={5} >
+        <VStack p={5}>
             <Center>
-            <Section delay={.2}>
-                <Heading
-                    orientation="horizontal"
-                    paddingBottom={2}
-                    fontWeight="extrabold"
-                    size="2xl"
-                    bgGradient={colorMode==="light" ? "linear(to-b, blue.400, blue.800)" : "linear(to-b, blue.100, blue.700)"}
-                    bgClip="text"
+                <Section delay={0.2}>
+                    <Heading
+                        paddingBottom={2}
+                        fontWeight="extrabold"
+                        size="2xl"
+                        bgGradient={colorMode === "light" ? "linear(to-b, blue.400, blue.800)" : "linear(to-b, blue.100, blue.700)"}
+                        bgClip="text"
                     >
-                    {heading()}
-                </Heading>
-            </Section>
+                        {heading}
+                    </Heading>
+                </Section>
             </Center>
-            <Section delay={.2}>
+
+            <Section delay={0.2}>
                 <Center>
                     <Image
                         src="/me.jpg"
@@ -50,59 +41,49 @@ const Page = () => {
                         borderRadius="full"
                         borderWidth={3}
                         borderStyle="solid"
-                        mb={5}/>
+                        mb={5}
+                    />
                 </Center>
-                < HStack mb={5}>
-                    <IconImage 
-                        imglink={"https://www.python.org/"}
-                        imgsrc={"https://img.shields.io/badge/Python-C0C0C0?style=for-the-badge&logo=python&logoColor=blue"}
-                    />
-                    <IconImage 
-                        imglink="https://www.djangoproject.com/"
-                        imgsrc="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green"
-                    />
-                    <IconImage 
-                        imglink="https://reactjs.org/"
-                        imgsrc="https://img.shields.io/badge/React-DBDBDB?style=for-the-badge&logo=react&logoColor=61DAFB"
-                    />
-                    <IconImage 
-                        imglink="https://www.docker.com/"
-                        imgsrc="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"
-                />
+                <HStack mb={5} justify="center" spacing={6}>
+                    {[
+                        { href: "https://golang.org/", icon: <SiGo size={40} color="#00ADD8" />, label: "Go" },
+                        { href: "https://www.python.org/", icon: <SiPython size={40} color="#3776AB" />, label: "Python" },
+                        { href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: <DiJavascript1 size={44} color="#F7DF1E" />, label: "JavaScript" },
+                        { href: "https://www.linux.org/", icon: <SiLinux size={40} color={colorMode === "light" ? "#333" : "#FCC624"} />, label: "Linux" },
+                        { href: "https://www.docker.com/", icon: <SiDocker size={40} color="#2CA5E0" />, label: "Docker" },
+                    ].map(({ href, icon, label }) => (
+                        <Tooltip key={label} label={label} hasArrow>
+                            <a href={href} target="_blank" rel="noreferrer">
+                                <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} style={{ display: "flex" }}>
+                                    {icon}
+                                </motion.div>
+                            </a>
+                        </Tooltip>
+                    ))}
                 </HStack>
             </Section>
 
-            <Container opacity={1} bg={colorMode==="light"? "white": "#1a202c"} borderRadius={10} boxShadow={"md"}>
-                <HStack>                
-                    <Section delay={0.4} >
-                        <Heading size="md" as="u" >Bio</Heading>
-                    </Section>
-                </HStack>
-                <HStack mb={5}>
-                <Section delay={.5}>
-                        <Text ml={3}>I am a full-stack developer based in the United States. I like to work with Django, React, and Docker, but have tons of experience with with kubernetes, graphql and kafka. Im passionate about Defi, enjoy scripting & automation, and strongly prefer a linux based environment. In my spare time I surf, play golf, play piano, and tinker with cars.</Text>
+            <Container opacity={1} bg={colorMode === "light" ? "white" : "#1a202c"} borderRadius={10} boxShadow="md">
+                <Section delay={0.4}>
+                    <Heading size="md" as="u" mt={3} display="block">About</Heading>
                 </Section>
-            </HStack>
-
-            <HStack >                
-                    <Section delay={0.6}>
-                        <Heading size="md" as="u" >Work</Heading>
-                    </Section>
-                </HStack>
-                <HStack mb={3}>
-                <Section delay={.7}>
-                        <Text ml={3}>I have developed desktop applications and web-scrapping bots. I have built scalable APIs, robust data layers, and sleek user interfaces. I contributed to open-source projects, and have built secure code for private clients. Below are a few things I have built and worked on. Please feel free to reach out with any inquiries.</Text>
+                <Section delay={0.5}>
+                    <Text ml={3} mb={5}>
+                        Full-stack developer based in the United States. I build scalable APIs, robust data layers,
+                        and clean user interfaces — with a strong preference for Go, Python, and Linux-native environments.
+                        I&apos;ve contributed to open-source projects and delivered secure solutions for private clients across
+                        web, desktop, and automation. Outside of work I surf, play golf, play piano, and tinker with cars.
+                        Feel free to reach out with any inquiries.
+                    </Text>
                 </Section>
-            </HStack>
-
             </Container>
 
-            <Section delay={.9}>
-                <ProjectContainer/>
+            <Section delay={0.7}>
+                <ProjectContainer />
             </Section>
-            <Box height="10" ></Box>
+            <Box height="10" />
         </VStack>
-        
-    )
-}
-export default Page
+    );
+};
+
+export default Page;
